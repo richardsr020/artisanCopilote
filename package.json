@@ -1,0 +1,64 @@
+{
+  "name": "artisancopilote",
+  "displayName": "ArtisanCopilote",
+  "description": "AI-powered developer assistant extension for VS Code: code completion, AI chat, terminal commands, workspace management.",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": ">=1.70.0"
+  },
+  "categories": [
+    "AI-assistant",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:artisancopilote.start",
+    "onCommand:artisancopilote.chat",
+    "onCommand:artisancopilote.codeComplete",
+    "onCommand:artisancopilote.terminalCommand",
+    "onCommand:artisancopilote.workspaceManager"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "artisancopilote.start",
+        "title": "ArtisanCopilote: Start Assistant"
+      },
+      {
+        "command": "artisancopilote.chat",
+        "title": "ArtisanCopilote: Chat with AI"
+      },
+      {
+        "command": "artisancopilote.codeComplete",
+        "title": "ArtisanCopilote: Intelligent Code Completion"
+      },
+      {
+        "command": "artisancopilote.terminalCommand",
+        "title": "ArtisanCopilote: Run Terminal Command"
+      },
+      {
+        "command": "artisancopilote.workspaceManager",
+        "title": "ArtisanCopilote: Workspace Manager"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.70.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "vsce": "^2.15.0"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}

@@ -25,6 +25,67 @@ This extension helps you write, improve, refactor, and understand code faster by
 
 ---
 
+## 🚦 Guide d’utilisation rapide
+
+### 1. Installation
+
+1. **Vérifie que Node.js et npm sont installés.**
+2. Ouvre un terminal dans le dossier du projet.
+3. Installe les dépendances (une seule fois) :
+   ```bash
+   npm install
+   ```
+4. Compile l’extension :
+   ```bash
+   npm run compile
+   ```
+5. Ouvre le dossier dans VS Code :
+   ```bash
+   code .
+   ```
+6. Appuie sur `F5` pour lancer l’extension en mode développement.
+
+---
+
+### 2. Configuration
+
+Ajoute ta clé API OpenAI dans les paramètres utilisateur de VS Code (`settings.json`) :
+```json
+{
+  "artisancopilote.openaiApiKey": "<VOTRE_CLÉ_OPENAI>"
+}
+```
+> Remplace `<VOTRE_CLÉ_OPENAI>` par ta vraie clé.
+
+---
+
+### 3. Utilisation des principales commandes
+
+- **Complétion de code intelligente** : Commence à taper dans un fichier, accepte les suggestions avec `Tab` ou `Entrée`.
+- **Chat IA** : Ouvre la palette de commandes (`Ctrl+Shift+P`) puis tape `ArtisanCopilote: Chat with AI`.
+- **Exécution de commande terminal** : Ouvre la palette de commandes et tape `ArtisanCopilote: Run Terminal Command`.
+- **Gestion de fichiers/dossiers** : Ouvre la palette de commandes et tape `ArtisanCopilote: Workspace Manager` pour lister, créer, renommer ou supprimer des fichiers.
+
+---
+
+### 4. Exemples d’utilisation
+
+- **Chat** :  
+  Pose une question comme « Explique-moi ce code » ou « Corrige cette fonction ».
+- **Terminal** :  
+  Demande « Run: npm install » ou « Run: git status ».
+- **Gestion de fichiers** :  
+  Demande « Créer fichier utils/helpers.js », « Renommer fichier index.js en main.js », etc.
+
+---
+
+### 5. Conseils
+
+- Tu peux personnaliser d’autres options dans `settings.json` (modèle, activer/désactiver certaines fonctions…).
+- Pour publier ou packager l’extension, utilise la commande `vsce package`.
+
+---
+
 ## ✨ Features
 
 ✅ **Intelligent Code Completion**  

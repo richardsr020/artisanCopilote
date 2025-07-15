@@ -1,0 +1,7 @@
+out/test
+node_modules
+.vscode-test
+.git
+.gitignore
+README.md
+LICENSE
